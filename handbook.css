@@ -1,0 +1,257 @@
+/* GLOBAL SETTINGS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    user-select: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #171614;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background: #0C0B0B;
+    color: #fff;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+header a.logo-link {
+    display: block;
+    text-align: center;
+}
+
+header img.logo {
+    height: 60px;
+}
+
+/* Section Styles */
+section {
+    padding: 2rem 10%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    flex: 1;
+}
+
+section h2 {
+	font-family: bebas neue;
+	letter-spacing: 0.1em;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.handbook-section {
+    background-color: rgba(23, 22, 20, 0.8);
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.handbook-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.handbook-item {
+    background-color: #0C0B0B;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px; 
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.handbook-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.handbook-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #CE422B;
+}
+
+.handbook-detail {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.dot-point {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    border-left: 3px solid #CE422B; 
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Footer Styles */
+footer {
+    background: #0C0B0B;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+footer ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+footer ul li a .icon {
+    position: relative;
+    color: #262626;
+    transition: 0.3s;
+    z-index: 3;
+}
+
+footer ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+
+footer ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+footer ul li a:hover:before {
+    top: 0;
+}
+
+/* SM Icon Colors */
+footer ul li:nth-child(1) a:before {
+    background: #CE422B; /* Discord */
+}
+
+footer ul li:nth-child(2) a:before {
+    background: #CE422B; /* Steam */
+}
+
+footer ul li:nth-child(3) a:before {
+    background: #CE422B; /* Twitter */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 5%;
+    }
+    .handbook-item {
+        max-width: 100%;
+        padding: 1rem;
+    }
+    .handbook-title {
+        font-size: 1.25rem;
+    }
+    .handbook-detail, .dot-point {
+        font-size: 1rem;
+    }
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 16px; 
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #CE422B, #FF6347); 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #b83622, #FF4500); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); 
+}
+
+::-webkit-scrollbar-button {
+  display: none; /* Remove the arrows */
+}
+
+/* Custom Scrollbar for Firefox */
+html {
+  scrollbar-width: thick; 
+  scrollbar-color: linear-gradient(45deg, #CE422B, #FF6347) transparent; 
+}
+
+/* Optional: To further customize the appearance for Firefox */
+html::-webkit-scrollbar {
+  width: 16px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #CE422B, #FF6347);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #b83622, #FF4500);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+html::-webkit-scrollbar-button {
+  display: none; 
+}
